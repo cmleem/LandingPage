@@ -1,25 +1,114 @@
+html, body{
+    height: 100%;
+    background-color: #F2E9D8;
+}
+
+/*애니메이션 요소*/
+
+/*상단 콘텐츠*/
+
 #intro{
     width: 100%;
-    background-color: #F2E9D8;
     height: 902px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-.top-navigation-bar{
+
+#intro > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro .top-bar{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 1010px;
+    height: 50px;
+    margin: 30px 320px;
 }
-.logo-fin .logo-image{
+
+.top-bar .logo-image{
     width: 130px;
     height: 40px;
-    margin: 31px 500px 31px 320px;
+    margin: 11px 0;
+    align-items: center;
 }
-.top-nav-element{
-    width: 205px;
-    height: 20px;
+
+.top-bar .elem-wrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 41px 49px 41px 0;
+
 }
+
+.elem-wrap button{
+    justify-self: end;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.top-nav-elem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 21px 0 21px 756px;
+    width: 205px;
+    height: 20px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    justify-self: start;
+}
+
+.top-nav-elem p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#intro .top-contents{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#intro .top-contents{
+    margin: 0 320px;
+    justify-content: space-between;
+}
+
+.top-contents .contents-wrap{
+    height: 800px;
+    align-items: start;
+    position: static;
+}
+.contents-wrap .top-title{
+    width: 695px;
+    height: 120px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 200px;
+    margin-right: 170px;
+}
+
+.top-img{
+    width: 415px;
+    height: 766px;
+    margin-top: 32px;
+
+}
+/*메인콘텐츠*/
+#main{
+    background-color: #ffffff;
+}
+
+
+
+/*버튼 공통 스타일*/
 .download-btn{
     width: 140px;
     height: 50px;
@@ -31,19 +120,21 @@
     text-align: center;
     color: #ffffff;
     border: none;
-    margin: 26px 320px 26px 0;
-    padding: 15px 33px;
     cursor: pointer;
+}
 
+/*모달*/
+
+/*하단 콘텐츠*/
+#info{
+    background-color: #ffffff;
 }
-.top-img{
-    width: 415px;
-    height: 890px;
-}
+
 .main-image{
     width: 660px;
     height: 390px;
 }
+
 .subs-info{
     width: 1280px;
     height: 200px;

@@ -13,17 +13,19 @@
     <section id="intro">
         <header class="top-bar">
             <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
-            <nav class="top-nav-elem">
-                <p>Home</p>
-                <p>About</p>
-                <p>Support</p>
-            </nav>
-            <button class="download-btn">Download</button>
+            <div class="elem-wrap">
+                <nav class="top-nav-elem">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Support</p>
+                </nav>
+                <button class="download-btn">Download</button>
+            </div>
         </header>
         <div class="top-contents">
-            <article class="top-txt">
+            <article class="contents-wrap">
                 <h1 class="top-title">
-                    Lorem Impum is simply<br>
+                    Lorem Ipsum is simply<br>
                     dummy text of the printing and
                 </h1>
                 <p class="top-text">
@@ -55,8 +57,14 @@
             </div>
             <div class="photo-list">
                 <div class="1th-list">
+                    <img src="img/img_1_1.png" alt="first cat image of 1st line">
+                    <img src="img/img_2_1.png" alt="second cat image of 1st line">
+                    <img src="img/img_3_1.png" alt="third cat image of 1st line">
                 </div>
                 <div class="2nd-list">
+                    <img src="img/img_1_2.png" alt="first cat image of 2nd line">
+                    <img src="img/img_2_2.png" alt="second cat image of 2nd line">
+                    <img src="img/img_3_2.png" alt="thire cat image of 2nd line">
                 </div>
             </div>
             <div class="add-info">
@@ -72,7 +80,22 @@
                 <h4 class="info-title">Where you'll be</h4>
                 <p>330, Chemdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
             </div>
-<!--            지도 정보 표시-->
+<!--            지도 정보 표시 시작-->
+            <!-- 지도를 표시할 div 입니다 -->
+            <div id="map" style="width:100%;height:350px;"></div>
+
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	6a2c8fedf29a0ad4b10d9e4bd3320cfd"></script>
+            <script type="text/javascript">
+                var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+                     mapOption = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                        level: 3 // 지도의 확대 레벨
+                };
+
+                // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                var map = new kakao.maps.Map(mapContainer, mapOption);
+            </script>
+<!--            지도 정보 표시 끝-->
         </div>
         <div class="subs-info">
             <div class="subs-texts">
@@ -87,6 +110,16 @@
                 <img src="img/mail.svg" alt="email-icon" class="subs-img">
                 <button class="subs-btn">Subscribe</button>
             </div>
+        </div>
+    </section>
+    <section class="modal">
+        <div class="modal-wrap">
+            <img src="img/none-title-1.png" alt="background image" class="wrap-img">
+            <img src="img/cat-1.png" alt="shy cat" class="modal-img">
+            <h5 class="modal-title">Thank you!</h5>
+            <p class="modal-txt">
+                Lorem Ipsum is simply dummy text of the printing industry.
+            </p>
         </div>
     </section>
     <section class="outro">
