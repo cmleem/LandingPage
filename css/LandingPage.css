@@ -1,11 +1,10 @@
-html, body{
-    height: 100%;
-    background-color: #F2E9D8;
-}
+/*html, body{*/
+/*    height: 100%;*/
+/*}*/
 
 /*애니메이션 요소*/
 
-/*상단 콘텐츠*/
+/*상단 콘텐츠 시작*/
 
 #intro{
     width: 100%;
@@ -14,6 +13,8 @@ html, body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: #F2E9D8;
+
 }
 
 #intro > div{
@@ -30,6 +31,7 @@ html, body{
     width: 1010px;
     height: 50px;
     margin: 30px 320px;
+    align-self: center;
 }
 
 .top-bar .logo-image{
@@ -58,8 +60,7 @@ html, body{
     margin: 21px 0 21px 756px;
     width: 205px;
     height: 20px;
-    /*display: flex;*/
-    /*flex-direction: row;*/
+
     justify-self: start;
 }
 
@@ -70,19 +71,15 @@ html, body{
 }
 
 #intro .top-contents{
-    display: flex;
     flex-direction: row;
-
+    justify-content: center;
 }
 
-#intro .top-contents{
-    margin: 0 320px;
-    justify-content: space-between;
-}
 
 .top-contents .contents-wrap{
     height: 800px;
-    align-items: start;
+    align-items: center;
+    flex-direction: column;
     position: static;
 }
 .contents-wrap .top-title{
@@ -91,25 +88,115 @@ html, body{
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
-    margin-top: 200px;
-    margin-right: 170px;
+    padding: 50px 100px;
+
+}
+.contents-wrap .top-text{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 150px 100px 50px ;
 }
 
 .top-img{
     width: 415px;
     height: 766px;
     margin-top: 32px;
-
 }
-/*메인콘텐츠*/
+
+
+
+/*상단 콘텐츠 끝*/
+
+
+/*메인 콘텐츠 시작*/
 #main{
     background-color: #ffffff;
 }
+#main .main-contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-contents .main-image{
+    width: 660px;
+    height: 390px;
+    border-radius: 30px;
+    /*box-shadow: 10px 10px 30px 0 rgba(0,0,0,25%);*/
+}
+.main-contexts .main-title{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+}
+.main-contexts .main-texts{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/*사진 부분*/
+.photos > div{
+
+}
+#main .photos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photos .photo-list{
+    flex-direction: column;
+    align-items: center;
+}
+.photo-txt-wrap .photos-title{
+    color: #D97652;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+}
+.photos .first-list{
+    width: 1278px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.photo-list img{
+    height: 378px;
+    border-radius: 30px;
+}
+
+.photo-txt-wrap .photos-texts{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+.photos-texts span{
+    color: #D97652;
+    font-weight: 700;
+}
 
 
+.photos .photo-list{
+    display: flex;
+}
+
+.photos .add-info{
+    width: 290px;
+    height: 108px;
+}
+.add-info .add-title{
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
 
 /*버튼 공통 스타일*/
-.download-btn{
+button{
     width: 140px;
     height: 50px;
     border-radius: 40px;
@@ -123,23 +210,131 @@ html, body{
     cursor: pointer;
 }
 
-/*모달*/
 
-/*하단 콘텐츠*/
+/*info 콘텐츠 시작*/
 #info{
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-txt .info-title{
+    width: 300px;
+    height: 45px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+}
+.info-txt p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
 }
 
-.main-image{
-    width: 660px;
-    height: 390px;
-}
-
-.subs-info{
+#info .subs-info{
     width: 1280px;
     height: 200px;
     border-radius: 30px;
     background-color: #263140;
-    box-sizing: border-box;
     color: #ffffff;
+    display: flex;
+    flex-direction: row;
 }
+.subs-texts .subs-title{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+}
+.subs-texts .subs-content{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.subs-info .submit{
+    width: 530px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+.submit .subs-img{
+    width: 20px;
+    height: 16px;
+}
+.submit input{
+    border: none;
+}
+
+
+/*info 콘텐츠 끝*/
+
+
+/*모달*/
+#modal {
+    position: fixed;
+    /*display: none;*/
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+}
+
+#modal .modal-wrap{
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.modal_wrap .wrap-img{
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.modal-wrap .modal-elem{
+    position: absolute;
+    z-index: 2;
+}
+.modal-wrap .modal-img{
+    width: 110px;
+    height: 112px;
+}
+.modal-wrap .modal-title{
+    width: 212px;
+    height: 46px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #D97652;
+    position: absolute;
+
+}
+.modal_wrap .modal-txt{
+    width: 365px;
+    height: 18px;
+    font-size: 4px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+/*하단 콘텐츠 시작*/
+#outro .outro-wrap{
+    position: relative;
+    display: inline-block;
+}
+.outro-wrap .bottom-img{
+    z-index: 1;
+}
+.outro-wrap .bottom-bar{
+    position: absolute;
+    z-index: 2;
+
+}
+/*하단 콘텐츠  끝*/
+
+

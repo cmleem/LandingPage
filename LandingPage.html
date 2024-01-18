@@ -43,25 +43,31 @@
         <div class="main-contents">
             <img src="img/img_4.png" alt="lying cat" class="main-image">
             <article class="main-contexts">
-                <h2 class="main-title"></h2>
-                <p class="main-texts"></p>
+                <h2 class="main-title">Lorem Ipsum is simply<br>
+                    dummy text of the printing<br>
+                    and dummy text
+                </h2>
+                <p class="main-texts">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting<br>
+                    industry.
+                </p>
             </article>
         </div>
         <div class="photos">
             <div class="photo-txt-wrap">
             <h3 class="photos-title">dummy text of the printing and dummy</h3>
             <p class="photos-texts">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.<br>
                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
             </p>
             </div>
             <div class="photo-list">
-                <div class="1th-list">
+                <div class="first-list">
                     <img src="img/img_1_1.png" alt="first cat image of 1st line">
                     <img src="img/img_2_1.png" alt="second cat image of 1st line">
                     <img src="img/img_3_1.png" alt="third cat image of 1st line">
                 </div>
-                <div class="2nd-list">
+                <div class="second-list">
                     <img src="img/img_1_2.png" alt="first cat image of 2nd line">
                     <img src="img/img_2_2.png" alt="second cat image of 2nd line">
                     <img src="img/img_3_2.png" alt="thire cat image of 2nd line">
@@ -82,7 +88,11 @@
             </div>
 <!--            지도 정보 표시 시작-->
             <!-- 지도를 표시할 div 입니다 -->
-            <div id="map" style="width:100%;height:350px;"></div>
+            <div id="map"
+                 style=" width: 1278px;
+                height: 520px;
+                border-right: 12px;">
+            </div>
 
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	6a2c8fedf29a0ad4b10d9e4bd3320cfd"></script>
             <script type="text/javascript">
@@ -106,8 +116,9 @@
                 </p>
             </div>
             <div class="submit">
-                <input type="email" id="email-value" placeholder="Enter your e-mail address">
                 <img src="img/mail.svg" alt="email-icon" class="subs-img">
+                <label for="email-value"></label>
+                <input type="email" id="email-value" placeholder="Enter your e-mail address">
                 <button class="subs-btn">Subscribe</button>
             </div>
         </div>
@@ -115,24 +126,29 @@
     <section class="modal">
         <div class="modal-wrap">
             <img src="img/none-title-1.png" alt="background image" class="wrap-img">
-            <img src="img/cat-1.png" alt="shy cat" class="modal-img">
-            <h5 class="modal-title">Thank you!</h5>
-            <p class="modal-txt">
-                Lorem Ipsum is simply dummy text of the printing industry.
-            </p>
+            <div class="modal-elem">
+                <img src="img/cat-1.png" alt="shy cat" class="modal-img">
+                <h5 class="modal-title">Thank you!</h5>
+                <p class="modal-txt">
+                    Lorem Ipsum is simply dummy text of the printing industry.
+                </p>
+                <button class="modal-btn">OK! I Love HODU</button>
+            </div>
         </div>
     </section>
     <section class="outro">
-        <img src="img/img_5.png" alt="cat head" class="bottom-img">
-        <footer class="bottom-bar">
-            <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
-            <nav class="bottom-nav-elem">
-                <img src="img/icon-blog.png" alt="blog icon" class="blog">
-                <img src="img/icon-insta.png" alt="insta logo" class="insta">
-                <img src="img/icon-facebook.png" alt="facebook-logo" class="facebook">
-                <img src="img/icon-youtube.png" alt="youtube icon" class="youtube">
-            </nav>
-        </footer>
+        <div class="outro-wrap">
+            <img src="img/img_5.png" alt="cat head" class="bottom-img">
+            <footer class="bottom-bar">
+                <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
+                <nav class="bottom-nav-elem">
+                    <img src="img/icon-blog.png" alt="blog icon" class="blog">
+                    <img src="img/icon-insta.png" alt="insta logo" class="insta">
+                    <img src="img/icon-facebook.png" alt="facebook-logo" class="facebook">
+                    <img src="img/icon-youtube.png" alt="youtube icon" class="youtube">
+                </nav>
+            </footer>
+        </div>
     </section>
 </body>
 </html>
