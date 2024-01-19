@@ -1,56 +1,61 @@
-/*html, body{*/
-/*    height: 100%;*/
-/*}*/
 
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body {
+    font-family: 'Pretendard', sans-serif;
+}
 /*애니메이션 요소*/
 
+html,body{
+    height: 100%;
+}
+
+
+/*버튼 공통 스타일*/
+button{
+    width: 140px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: #D97652;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: Pretendard;
+}
 /*상단 콘텐츠 시작*/
 
 #intro{
     width: 100%;
-    height: 902px;
+
     margin-top: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     background-color: #F2E9D8;
-
 }
 
-#intro > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#intro .top-bar{
+#intro .top-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 1010px;
-    height: 50px;
-    margin: 30px 320px;
-    align-self: center;
+    justify-content: space-between;
+    width: 66%;
+    height: 110px;
 }
-
 .top-bar .logo-image{
     width: 130px;
     height: 40px;
-    margin: 11px 0;
-    align-items: center;
 }
 
 .top-bar .elem-wrap{
     display: flex;
     flex-direction: row;
-
-}
-
-.elem-wrap button{
-    justify-self: end;
-    margin-left: 50px;
-    margin-top: 10px;
 }
 
 .top-nav-elem{
@@ -70,65 +75,87 @@
     line-height: 20px;
 }
 
+.elem-wrap button{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#intro .top-contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 #intro .top-contents{
     flex-direction: row;
     justify-content: center;
+    width: 66%;
 }
-
 
 .top-contents .contents-wrap{
-    height: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: start;
     align-items: center;
     flex-direction: column;
-    position: static;
+
 }
 .contents-wrap .top-title{
-    width: 695px;
-    height: 120px;
     font-size: 48px;
     font-weight: 700;
     line-height: 60px;
-    padding: 50px 100px;
+    margin-bottom: 40px;
 
 }
 .contents-wrap .top-text{
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    padding: 150px 100px 50px ;
+    align-self: start;
+    margin-bottom: 40px;
+}
+.contents-wrap .download-btn{
+    align-self: start;
+    width: 140px;
+    height: 50px;
 }
 
 .top-img{
     width: 415px;
     height: 766px;
-    margin-top: 32px;
+    margin-left:170px;
 }
-
-
-
 /*상단 콘텐츠 끝*/
-
 
 /*메인 콘텐츠 시작*/
 #main{
     background-color: #ffffff;
+
 }
 #main .main-contents{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    width: 66%;
 }
-
+.main-contents .main-contexts{
+    margin-left: 30px;
+}
 .main-contents .main-image{
     width: 660px;
     height: 390px;
     border-radius: 30px;
-    /*box-shadow: 10px 10px 30px 0 rgba(0,0,0,25%);*/
+    /*box-shadow: 10px 10px 30px 30px rgba(0,0,0,25%);*/
 }
+
 .main-contexts .main-title{
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
+    margin-bottom: 30px;
 }
 .main-contexts .main-texts{
     font-size: 16px;
@@ -137,19 +164,15 @@
 }
 
 /*사진 부분*/
-.photos > div{
 
-}
 #main .photos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.photos .photo-list{
-    flex-direction: column;
-    align-items: center;
+.photos .photo-txt-wrap{
+    width: 100%;
 }
 .photo-txt-wrap .photos-title{
     color: #D97652;
@@ -157,57 +180,64 @@
     font-weight: 700;
     line-height: 60px;
     text-align: center;
+    margin-bottom: 40px;
 }
-.photos .first-list{
-    width: 1278px;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-.photo-list img{
-    height: 378px;
-    border-radius: 30px;
-}
-
 .photo-txt-wrap .photos-texts{
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     text-align: center;
+    margin-bottom: 90px;
 }
+
 .photos-texts span{
     color: #D97652;
     font-weight: 700;
 }
 
-
 .photos .photo-list{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.first-list, .second-list{
+    flex-direction: row;
+}
+.photo-list img{
+    height: 378px;
+    border-radius: 30px;
+    margin: 36px 36px;
+    box-shadow: 10px 10px 30px 0 rgba(0,0,0,25%);
+}
+
+
 .photos .add-info{
-    width: 290px;
-    height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-top: 50px;
+
+    position: relative;
+}
+.add-info .add-warp{
+    text-align: center;
 }
 .add-info .add-title{
     font-size: 24px;
     font-weight: 700;
-    text-align: center;
+    margin-bottom: 28px;
 }
+.add-info::after{
+    width: 1278px;
+    height: 1px;
+    content: '';
+    background-color: #C4C4C4;
 
-/*버튼 공통 스타일*/
-button{
-    width: 140px;
-    height: 50px;
-    border-radius: 40px;
-    background-color: #D97652;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
 }
 
 
@@ -216,10 +246,23 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 1000px;
+}
+#info .map-info{
+    height: 800px;
+
+}
+#info .info-txt{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
 }
 .info-txt .info-title{
-    width: 300px;
-    height: 45px;
+
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
@@ -238,11 +281,18 @@ button{
     color: #ffffff;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    gap: 150px;
+    position: absolute;
+    top: 900px;
 }
 .subs-texts .subs-title{
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
+    margin-bottom: 25px;
 }
 .subs-texts .subs-content{
     font-size: 14px;
@@ -256,13 +306,18 @@ button{
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 .submit .subs-img{
     width: 20px;
-    height: 16px;
+    height: 30px;
+    margin-left: 20px;
 }
 .submit input{
     border: none;
+    width: 325px;
+    height: 40px;
 }
 
 
@@ -272,7 +327,7 @@ button{
 /*모달*/
 #modal {
     position: fixed;
-    /*display: none;*/
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -280,59 +335,92 @@ button{
     width: 100%;
     height: 100%;
     z-index: 999;
-
 }
 
 #modal .modal-wrap{
     position: relative;
-    display: inline-block;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: inline-block;
+
 }
 .modal_wrap .wrap-img{
+
     border-radius: 30px;
     z-index: 1;
 }
 
 .modal-wrap .modal-elem{
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     z-index: 2;
+    top: 80px;
 }
 .modal-wrap .modal-img{
     width: 110px;
     height: 112px;
 }
-.modal-wrap .modal-title{
-    width: 212px;
-    height: 46px;
+.modal-elem .modal-title{
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
     color: #D97652;
-    position: absolute;
+    margin: 20px 0;
+    /*position: absolute;*/
 
 }
-.modal_wrap .modal-txt{
-    width: 365px;
-    height: 18px;
+.modal_elem .modal-txt{
+
     font-size: 4px;
     font-weight: 400;
     line-height: 18px;
 }
+.modal-elem .modal-btn{
+    width: 183px;
+    height: 50px;
+    margin-top: 20px;
+}
 
 /*하단 콘텐츠 시작*/
-#outro .outro-wrap{
+#outro{
     position: relative;
-    display: inline-block;
-}
-.outro-wrap .bottom-img{
     z-index: 1;
 }
-.outro-wrap .bottom-bar{
-    position: absolute;
-    z-index: 2;
+#outro .outro-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.outro-wrap .bottom-img{
+    width: 100%;
+}
+.outro-wrap .bottom-bar {
+    width: 66%;
+    height:140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 800px;
+}
+
+.bottom-bar .logo-image{
+    width: 226px;
+    height: 70px;
+
+}
+.bottom-bar .bottom-nav-elem{
+    display: flex;
+    justify-content: space-between;
+    width: 228px;
+    height: 42px;
 
 }
 /*하단 콘텐츠  끝*/

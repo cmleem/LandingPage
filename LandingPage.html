@@ -70,16 +70,17 @@
                 <div class="second-list">
                     <img src="img/img_1_2.png" alt="first cat image of 2nd line">
                     <img src="img/img_2_2.png" alt="second cat image of 2nd line">
-                    <img src="img/img_3_2.png" alt="thire cat image of 2nd line">
+                    <img src="img/img_3_2.png" alt="third cat image of 2nd line">
                 </div>
             </div>
             <div class="add-info">
-                <h3 class="add-title">Continue exploring HODU</h3>
-                <button class="more-btn">Show more</button>
+                <div class="add-warp">
+                    <h3 class="add-title">Continue exploring HODU</h3>
+                    <button class="more-btn">Show more</button>
+                </div>
             </div>
         </div>
     </section>
-<!--    after 가상요소 -->
     <section id="info">
         <div class="map-info">
             <div class = "info-txt">
@@ -89,9 +90,11 @@
 <!--            지도 정보 표시 시작-->
             <!-- 지도를 표시할 div 입니다 -->
             <div id="map"
-                 style=" width: 1278px;
+                style=" width: 1278px;
                 height: 520px;
-                border-right: 12px;">
+                margin: 48px 0;
+                border-radius: 12px;"
+            >
             </div>
 
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	6a2c8fedf29a0ad4b10d9e4bd3320cfd"></script>
@@ -123,7 +126,7 @@
             </div>
         </div>
     </section>
-    <section class="modal">
+    <section id="modal">
         <div class="modal-wrap">
             <img src="img/none-title-1.png" alt="background image" class="wrap-img">
             <div class="modal-elem">
@@ -136,7 +139,7 @@
             </div>
         </div>
     </section>
-    <section class="outro">
+    <section id="outro">
         <div class="outro-wrap">
             <img src="img/img_5.png" alt="cat head" class="bottom-img">
             <footer class="bottom-bar">
@@ -150,5 +153,6 @@
             </footer>
         </div>
     </section>
+    <script type="text/javascript" src="js/LandingPage.js"></script>
 </body>
 </html>

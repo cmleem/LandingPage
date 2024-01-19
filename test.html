@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Example</title>
     <style>
-        .container {
+        .parent-1 {
+            background-color: lightblue;
             position: relative;
-            display: inline-block;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
         }
 
-        img {
-            z-index: 1; /* 이미지의 z-index를 1로 설정 */
-        }
-
-        p.overlay-text {
+        .child {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 25px;
+            z-index: 2;
+        }
 
-            z-index: 2; /* 텍스트의 z-index를 2로 설정하여 이미지 위에 올리기 */
+        .parent-2 {
+            background-color: lightgreen;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            margin-top: 100px; /* 부모1과 부모2 간격 조절 */
         }
     </style>
-    <title>Image Overlay</title>
 </head>
 <body>
 
-<div class="container">
-    <img src="img/cat-1.png" alt="Your Image">
-    <p class="overlay-text">Overlay Text</p>
+<div class="parent-1">
+    <div class="child"></div>
 </div>
+<div class="parent-2"></div>
 
 </body>
 </html>
