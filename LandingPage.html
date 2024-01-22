@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
            minimum-scale=1.0">
+    <link rel="icon" href="img/ms-icon-144x144.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/LandingPage.css">
     <title>HODU</title>
@@ -12,14 +13,16 @@
 <body>
     <section id="intro">
         <header class="top-bar">
-            <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
+            <a href="" class="logoLink">
+                <img src="img/Logo-fin.svg" alt="HODU logo" class="logo-image">
+            </a>
             <div class="elem-wrap">
                 <nav class="top-nav-elem">
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Support</p>
+                    <a href="#intro">Home</a>
+                    <a href="#main">About</a>
+                    <a href="#outro">Support</a>
                 </nav>
-                <button class="download-btn">Download</button>
+                <button class="download-btn-1">Download</button>
             </div>
         </header>
         <div class="top-contents">
@@ -34,7 +37,7 @@
                     Lorem ipsum had been the industry's standard summy text<br>
                     ever since the 1500s, when an unknown
                 </p>
-                <button class="download-btn">Download</button>
+                <button class="download-btn-2">Download</button>
             </article>
             <img src="img/img_cat_png.png" alt="standing cat with box" class="top-img">
         </div>
@@ -63,14 +66,14 @@
             </div>
             <div class="photo-list">
                 <div class="first-list">
-                    <img src="img/img_1_1.png" alt="first cat image of 1st line">
-                    <img src="img/img_2_1.png" alt="second cat image of 1st line">
-                    <img src="img/img_3_1.png" alt="third cat image of 1st line">
+                    <a href=""><img src="img/img_1_1.png" alt="first cat image of 1st line" onclick="window.open(this.src)"></a>
+                    <a href=""><img src="img/img_2_1.png" alt="second cat image of 1st line" onclick="window.open(this.src)"></a>
+                    <a href=""><img src="img/img_3_1.png" alt="third cat image of 1st line" onclick="window.open(this.src)"></a>
                 </div>
                 <div class="second-list">
-                    <img src="img/img_1_2.png" alt="first cat image of 2nd line">
-                    <img src="img/img_2_2.png" alt="second cat image of 2nd line">
-                    <img src="img/img_3_2.png" alt="third cat image of 2nd line">
+                    <a href=""><img src="img/img_1_2.png" alt="first cat image of 2nd line" onclick="window.open(this.src)"></a>
+                    <a href=""><img src="img/img_2_2.png" alt="second cat image of 2nd line" onclick="window.open(this.src)"></a>
+                    <a href=""><img src="img/img_3_2.png" alt="third cat image of 2nd line" onclick="window.open(this.src)"></a>
                 </div>
             </div>
             <div class="add-info">
@@ -121,7 +124,7 @@
             <div class="submit">
                 <img src="img/mail.svg" alt="email-icon" class="subs-img">
                 <label for="email-value"></label>
-                <input type="email" id="email-value" placeholder="Enter your e-mail address">
+                <input type="email" id="email-value" name="email-add" placeholder="Enter your e-mail address" required>
                 <button class="subs-btn">Subscribe</button>
             </div>
         </div>
@@ -142,13 +145,16 @@
     <section id="outro">
         <div class="outro-wrap">
             <img src="img/img_5.png" alt="cat head" class="bottom-img">
+            <img src="img/scroll-top-btn-1.png" alt="scroll button" class="scroll-btn">
             <footer class="bottom-bar">
-                <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
+                <a href="" class="logoLink">
+                    <img src="img/Logo-fin.svg" alt="호두 로고" class="logo-image">
+                </a>
                 <nav class="bottom-nav-elem">
-                    <img src="img/icon-blog.png" alt="blog icon" class="blog">
-                    <img src="img/icon-insta.png" alt="insta logo" class="insta">
-                    <img src="img/icon-facebook.png" alt="facebook-logo" class="facebook">
-                    <img src="img/icon-youtube.png" alt="youtube icon" class="youtube">
+                    <a href="https://blog.naver.com" target="_blank"><img src="img/icon-blog.png" alt="blog icon" class="blog"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/icon-insta.png" alt="insta logo" class="insta"></a>
+                    <a href="https://www.facebook.com" target="_blank"><img src="img/icon-facebook.png" alt="facebook logo" class="facebook"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="img/icon-youtube.png" alt="youtube icon" class="youtube"></a>
                 </nav>
             </footer>
         </div>
