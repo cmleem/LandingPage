@@ -212,11 +212,12 @@ const onIntersect = (entries, observer) => {
     entries.forEach(async (entry) => {
         if (entry.isIntersecting){
             const data = await fetchImages(pageToFetch++);
-            photoList.innerHTML += '<div class="photo-row">';
-            data.forEach((item) =>{
-                photoList.innerHTML += "<a href=''><img src="+ item.download_url +" onclick=\"window.open(this.src)\"></a>";
+            let content = '<div class="photo-row">';
+            data.forEach((item)=>{
+                content +=  "<a href=''><img src="+ item.download_url +" onclick=\"window.open(this.src)\"></a>";
             });
-            photoList.innerHTML += '</div>';
+            content += '</div>';
+            photoList.innerHTML += content;
         }
     });
 };
