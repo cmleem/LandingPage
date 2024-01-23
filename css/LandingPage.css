@@ -3,8 +3,6 @@
 body {
     font-family: 'Pretendard', sans-serif;
 }
-/*애니메이션 요소*/
-
 html,body{
     height: 100%;
 }
@@ -126,6 +124,7 @@ button{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 100px;
 }
 .main-contents .main-contexts{
     margin-left: 30px;
@@ -226,6 +225,12 @@ button{
     align-items: center;
     justify-content: center;
     height: 1000px;
+}
+#map{
+    width: 1278px;
+    height: 520px;
+    margin: 48px 0;
+    border-radius: 12px;
 }
 #info .map-info{
     height: 800px;

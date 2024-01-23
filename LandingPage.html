@@ -22,7 +22,7 @@
                     <a href="#main">About</a>
                     <a href="#outro">Support</a>
                 </nav>
-                <button class="download-btn-1">Download</button>
+                <button class="download-btn-1">Copy URL</button>
             </div>
         </header>
         <div class="top-contents">
@@ -88,30 +88,13 @@
         <div class="map-info">
             <div class = "info-txt">
                 <h4 class="info-title">Where you'll be</h4>
-                <p>330, Chemdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+                <p>110, Sejongdae-ro, Jung-gu, Seoul, Republic of Korea</p>
             </div>
-<!--            지도 정보 표시 시작-->
-            <!-- 지도를 표시할 div 입니다 -->
-            <div id="map"
-                style=" width: 1278px;
-                height: 520px;
-                margin: 48px 0;
-                border-radius: 12px;"
-            >
-            </div>
-
+            <!-- 지도 정보 표시 시작 -->
+            <div id="map"></div>
             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	6a2c8fedf29a0ad4b10d9e4bd3320cfd"></script>
-            <script type="text/javascript">
-                var mapContainer = document.getElementById('map'); // 지도를 표시할 div
-                     mapOption = {
-                        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                        level: 3 // 지도의 확대 레벨
-                };
-
-                // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-                var map = new kakao.maps.Map(mapContainer, mapOption);
-            </script>
-<!--            지도 정보 표시 끝-->
+            <script type="text/javascript"></script>
+            <!-- 지도 정보 표시 끝 -->
         </div>
         <div class="subs-info">
             <div class="subs-texts">
