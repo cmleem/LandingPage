@@ -182,41 +182,49 @@ scrollTopBtn.addEventListener('click', ()=>{
 
 
 //무한 스크롤
-const imageList = document.querySelector(".photo-list");
+const photoListEnd = document.querySelector("#photo-list-end");
+const photoList = document.querySelector(".photo-list");
 const moreBtn = document.querySelector(".more-btn");
 let pageToFetch = 1;
+
 async function fetchImages(pageNum){
     try {
-        const response = await fetch('https://picsum.photos/v2/list?page='+pageNum+'&limit=10');
+        const response = await fetch('https://picsum.photos/v2/list?page='+pageNum+'&limit=3');
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
         }
 
         const datas = await response.json();
-        console.log(datas);
-
-        makeImageList(datas);
-
+        
+        return datas;
     } catch (error) {
         console.error('데이터를 가져오는데 문제가 발생했습니다 :', error);
     }
 }
 
-function makeImageList(datas){
-    datas.forEach((item)=>{
-        imageList.innerHTML += "<a href=''><img src="+ item.download_url +" onclick=\"window.open(this.src)\"></a>";
-    });
-}
-moreBtn.addEventListener('click', function () {
-    window.addEventListener('scroll', () => {
-        // 스크롤이 상단으로부터 얼마나 이동했는지 알아야 한다. (뷰포트 높이 + 스크를된 길이)
-        // 화면에 로딩된 페이지의 전체 높이를 알아야 한다.
-        // 뷰포트 높이 + 스크롤된 길이 + 5~10px === 화면에 로딩된 페이지의 전체 높이
+const option = {
+    root: null,
+    rootMargin: "0px 0px 0px 0px",
+    threshold: 0
+};
 
-        if (window.innerHeight + document.documentElement.scrollTop + 10 >= document.documentElement.offsetHeight) {
-            fetchImages(pageToFetch++);
+const onIntersect = (entries, observer) => {
+    entries.forEach(async (entry) => {
+        if (entry.isIntersecting){
+            const data = await fetchImages(pageToFetch++);
+            photoList.innerHTML += '<div class="photo-row">';
+            data.forEach((item) =>{
+                photoList.innerHTML += "<a href=''><img src="+ item.download_url +" onclick=\"window.open(this.src)\"></a>";
+            });
+            photoList.innerHTML += '</div>';
         }
-    })
+    });
+};
+const observer = new IntersectionObserver(onIntersect, option);
+
+moreBtn.addEventListener('click', function(){
+    observer.observe(photoListEnd);
+    moreBtn.style.display = 'none';
 });
 
 
